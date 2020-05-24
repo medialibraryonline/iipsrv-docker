@@ -1,6 +1,6 @@
 # iipsrv-docker
 
-A minimal compose stack to deploy [iipsrv](https://github.com/iipimage/iipsrv).     
+A minimal compose stack to deploy [iipsrv](https://github.com/ruven/iipsrv).     
 Made with two containers, one running iipsrv with spawn-fcgi, the other running nginx.
 
 Nginx can  handle load balancing to multiple iipsrv instances, please refer to [iipsrv doc](https://iipimage.sourceforge.io/documentation/server/)
