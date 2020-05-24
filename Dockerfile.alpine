@@ -1,0 +1,7 @@
+FROM alpine
+RUN apk --no-cache add git alpine-sdk autoconf automake libtool jpeg libjpeg-turbo-dev tiff tiff-dev spawn-fcgi
+WORKDIR /tmp/iipsrv
+RUN git clone https://github.com/ruven/iipsrv.git ./
+RUN ./autogen.sh && ./configure && make
+WORKDIR /iipsrv
+RUN cp /tmp/iipsrv/src/iipsrv.fcgi .
